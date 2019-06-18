@@ -3,12 +3,25 @@ package main;
 import java.util.Random;
 
 public class Main {
+	private static int[] array = new int[10];
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("1)\n");
-		Random random = new Random();
-		int[] array = new int[10];
+		sum();
+
+		System.out.println("3)-4)\n");// how many times will we meet following numbers:1,2,3,4,5
+		duplicatingElements();
+		System.out.println("5)\n");
+		symbols();
+		System.out.println("\n6)\n");
+		zeroAndOne();
+		System.out.println("\n7)\n");
+		evenAndOdd();
+
+	}
+
+	public static void sum() {
 		int sum = 0;
 		for (int i = 0; i < array.length; i++) {
 			array[i] = 1 + (int) (Math.random() * 5);
@@ -20,37 +33,25 @@ public class Main {
 		for (int i = 0; i < array.length; i++) {
 			sum += array[i];
 		}
-
 		System.out.println("Sum " + sum);
+	}
 
-		System.out.println("3)-4)\n");// how many times will we meet following numbers:1,2,3,4,5
-		int count1 = 0;
-		int count2 = 0;
-		int count3 = 0;
-		int count4 = 0;
-		int count5 = 0;
+	public static void duplicatingElements() {
+		int arrayIndex[] = new int[6];
+
 		for (int i = 0; i < array.length; i++) {
-			if (array[i] == 1) {
-				count1++;
-			} else if (array[i] == 2) {
-				count2++;
-			} else if (array[i] == 3) {
-				count3++;
-			} else if (array[i] == 4) {
-				count4++;
-			} else if (array[i] == 5) {
-				count5++;
-			}
-
-			System.out.print(array[i] + " ");
+			arrayIndex[array[i]]++;
 		}
-		System.out.println("\n number 1 met " + count1 + " times");
-		System.out.println(" number 2 met " + count2 + " times");
-		System.out.println(" number 3 met " + count3 + " times");
-		System.out.println(" number 4 met " + count4 + " times");
-		System.out.println(" number 5 met " + count5 + " times");
+		System.out.println("\n number 1 met " + arrayIndex[1] + " times");
+		System.out.println(" number 2 met " + arrayIndex[2] + " times");
+		System.out.println(" number 3 met " + arrayIndex[3] + " times");
+		System.out.println(" number 4 met " + arrayIndex[4] + " times");
+		System.out.println(" number 5 met " + arrayIndex[5] + " times");
 
-		System.out.println("5)\n");
+		System.out.println("\n");
+	}
+
+	public static void symbols() {
 
 		int[] digits = new int[12];
 		char[] symbols = new char[12];
@@ -67,8 +68,9 @@ public class Main {
 			symbols[i] = Integer.toString(digits[i]).charAt(0);
 			System.out.print(" " + (int) symbols[i] + " ");
 		}
+	}
 
-		System.out.println("\n6)\n");
+	public static void zeroAndOne() {
 
 		int array1[] = new int[15];
 
@@ -112,7 +114,11 @@ public class Main {
 
 		System.out.println(" 0 met " + maxLength0 + " times in a row \n" + " 1 met " + maxLength1 + " times in a row");
 
-		System.out.println("\n7)\n");
+	}
+
+	public static void evenAndOdd() {
+		Random random = new Random();
+
 		int[] array2 = new int[10];
 		int sumOfEven = 0;
 		int sumOfOdd = 0;
