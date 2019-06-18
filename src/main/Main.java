@@ -23,7 +23,7 @@ public class Main {
 
 		System.out.println("Sum " + sum);
 
-		System.out.println("3)-4)\n");
+		System.out.println("3)-4)\n");// how many times will we meet following numbers:1,2,3,4,5
 		int count1 = 0;
 		int count2 = 0;
 		int count3 = 0;
