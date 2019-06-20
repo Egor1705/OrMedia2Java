@@ -76,6 +76,7 @@ for(int i = 1;i<arrayIndex.length;i++ ) {
 //			System.out.print(" " + (int) symbols[i] + " ");
 //		}
 		char ch[] = {'1','2','3','6','8','9'};
+		System.out.println(ch);
 		
 	}
 
