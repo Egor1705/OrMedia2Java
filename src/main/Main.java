@@ -41,33 +41,42 @@ public class Main {
 
 		for (int i = 0; i < array.length; i++) {
 			arrayIndex[array[i]]++;
+			
+			//System.out.println("\n number " +array[i]+"met "  + arrayIndex[i] + " times\n");
 		}
-		System.out.println("\n number 1 met " + arrayIndex[1] + " times");
-		System.out.println(" number 2 met " + arrayIndex[2] + " times");
-		System.out.println(" number 3 met " + arrayIndex[3] + " times");
-		System.out.println(" number 4 met " + arrayIndex[4] + " times");
-		System.out.println(" number 5 met " + arrayIndex[5] + " times");
+for(int i = 1;i<arrayIndex.length;i++ ) {
+	System.out.println("\n number "+ i+" met " + arrayIndex[i] + " times");
+}
+		
+		
+//		System.out.println("\n number 1 met " + arrayIndex[1] + " times");
+//		System.out.println(" number 2 met " + arrayIndex[2] + " times");
+//		System.out.println(" number 3 met " + arrayIndex[3] + " times");
+//		System.out.println(" number 4 met " + arrayIndex[4] + " times");
+//		System.out.println(" number 5 met " + arrayIndex[5] + " times");
 
 		System.out.println("\n");
 	}
 
 	public static void symbols() {
 
-		int[] digits = new int[12];
-		char[] symbols = new char[12];
-		for (int i = 0; i < digits.length; i++) {
-			digits[i] = 1 + (int) (Math.random() * 5);
-		}
-
-		for (int i = 0; i < digits.length; i++) {
-			System.out.print(" " + digits[i] + " ");
-		}
-		System.out.println("\n");
-
-		for (int i = 0; i < digits.length; i++) {
-			symbols[i] = Integer.toString(digits[i]).charAt(0);
-			System.out.print(" " + (int) symbols[i] + " ");
-		}
+//		int[] digits = new int[12];
+//		char[] symbols = new char[12];
+//		for (int i = 0; i < digits.length; i++) {
+//			digits[i] = 1 + (int) (Math.random() * 5);
+//		}
+//
+//		for (int i = 0; i < digits.length; i++) {
+//			System.out.print(" " + digits[i] + " ");
+//		}
+//		System.out.println("\n");
+//
+//		for (int i = 0; i < digits.length; i++) {
+//			symbols[i] = Integer.toString(digits[i]).charAt(0);
+//			System.out.print(" " + (int) symbols[i] + " ");
+//		}
+		char ch[] = {'1','2','3','6','8','9'};
+		
 	}
 
 	public static void zeroAndOne() {
@@ -129,7 +138,7 @@ public class Main {
 			if (array2[i] % 2 == 0) {
 				sumOfEven += array2[i];
 			}
-			if (array2[i] % 2 != 0) {
+			else  {
 				sumOfOdd += array2[i];
 			}
 			System.out.print(array2[i] + " ");
